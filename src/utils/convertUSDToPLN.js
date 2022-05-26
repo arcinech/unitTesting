@@ -13,6 +13,6 @@ export const convertUSDToPLN = (USD) => {
     style: 'currency',
     currency: 'PLN'
   });
-  console.log(formatter.format(USDtoPLN).replace(/\u00a0/g, ' '));
+
   return formatter.format(USDtoPLN).replace(/\u00a0/g, ' ');
 }
