@@ -49,9 +49,9 @@ describe('Component ResultBox', () => {
     });
 
     const testCasesSameCurrency = [
-        {amount: 12, currency: 'USD', result: "$12.00 = $12.00"},
+        {amount: 1002, currency: 'USD', result: "$1,002.00 = $1,002.00"},
+        {amount: 0, currency: 'USD', result: "$0.00 = $0.00"},
         {amount: 14, currency: 'PLN', result: "PLN 14.00 = PLN 14.00"},
-        {amount: 15, currency: 'USD', result: "$15.00 = $15.00"},
         {amount: 100, currency: 'PLN', result: "PLN 100.00 = PLN 100.00"},
     ];
 
@@ -70,6 +70,8 @@ describe('Component ResultBox', () => {
 
     const testCasesNegativeValue = [
         {amount: -10, result: "Wrong value..."},
+        {amount: -100, result: "Wrong value..."},
+        {amount: -123123, result: "Wrong value..."},
     ];
 
     testCasesNegativeValue.forEach((testObj) => {
